@@ -1,0 +1,8 @@
+button{
+    @include border-r;
+}
+.loading{
+    width:100%;
+    height:1.5rem;
+    background:url('../assets/loading.gif') no-repeat center;
+}

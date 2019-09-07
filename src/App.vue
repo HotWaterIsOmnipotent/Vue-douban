@@ -1,0 +1,44 @@
+<template>
+  <div id="app">
+    <keep-alive include = "home">
+      <router-view/>
+    </keep-alive>
+    <Header></Header>
+    <!-- <tabber></tabber> -->
+  </div>
+</template>
+
+<script>
+import tabber from '@/components/Tabber';
+import Header from '@/components/Header';
+// import {ADD_GOODS} from '@/store/myCar/const'
+export default {
+  components:{
+    tabber,Header
+  },
+  created(){
+    this.$router.push('/');
+    this.$store.dispatch('initGoods')
+  }
+}
+</script>
+
+<style lang="scss">
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+</style>

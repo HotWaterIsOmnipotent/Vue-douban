@@ -1,0 +1,5 @@
+const CHANG_NUM1 = "CHANG_NUM1"
+const RANDOM_NUM1 = 'RANDOM_NUM1'
+export {
+    CHANG_NUM1,RANDOM_NUM1
+}
